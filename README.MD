@@ -33,4 +33,5 @@ Para criar e iniciar os serviços definidos no arquivo `compose.yaml`, utilize o
 
 ```sh
 docker compose up -d
+docker run --rm --network=host -e SONAR_HOST_URL="http://localhost:9000/"  -v "C:\minhapasta\angular\robsonalvesdevbr-angular:/usr/src" sonarsource/sonar-scanner-cli -D"sonar.projectKey=profilesrobson" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=sqp_7e7ad2d68a495781a0ce97a7fa1735da588a96b8"
 ```
